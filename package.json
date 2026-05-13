@@ -1,0 +1,137 @@
+{
+  // ====================================================
+  // Project Information
+  // ====================================================
+
+  "name": "roles-institutes-api",
+
+  "version": "1.0.0",
+
+  "main": "index.js",
+
+  "description": "",
+
+  "keywords": [],
+
+  "author": "",
+
+  "license": "ISC",
+
+
+  // ====================================================
+  // Project Scripts
+  // ====================================================
+  // These scripts are used to run the application,
+  // execute tests, generate reports, and seed data.
+  // ====================================================
+
+  "scripts": {
+
+    // ------------------------------------------------
+    // Start Production Server
+    // ------------------------------------------------
+    // Runs the application using Node.js
+    // ------------------------------------------------
+    "start": "node src/server.js",
+
+    // ------------------------------------------------
+    // Start Development Server
+    // ------------------------------------------------
+    // Runs the server using Nodemon for automatic
+    // restart on file changes.
+    // ------------------------------------------------
+    "dev": "nodemon src/server.js",
+
+    // ------------------------------------------------
+    // Run API Automation Tests
+    // ------------------------------------------------
+    // Executes Playwright API test cases.
+    // ------------------------------------------------
+    "test:api": "playwright test",
+
+    // ------------------------------------------------
+    // Open Playwright HTML Report
+    // ------------------------------------------------
+    // Displays the generated Playwright test report.
+    // ------------------------------------------------
+    "test:api:report": "playwright show-report",
+
+    // ------------------------------------------------
+    // Run Unit Tests
+    // ------------------------------------------------
+    // Executes Jest test cases sequentially.
+    // ------------------------------------------------
+    "test": "jest --runInBand",
+
+    // ------------------------------------------------
+    // Run Jest In Watch Mode
+    // ------------------------------------------------
+    // Automatically reruns tests when files change.
+    // ------------------------------------------------
+    "test:watch": "jest --watchAll",
+
+    // ------------------------------------------------
+    // Generate Test Coverage Report
+    // ------------------------------------------------
+    // Runs Jest with code coverage enabled.
+    // ------------------------------------------------
+    "test:coverage": "jest --coverage",
+
+    // ------------------------------------------------
+    // Run Database Seeder
+    // ------------------------------------------------
+    // Inserts initial/sample data into the database.
+    // ------------------------------------------------
+    "seed": "node seed/seed.js"
+  },
+
+
+  // ====================================================
+  // Production Dependencies
+  // ====================================================
+  // Packages required for the application to run.
+  // ====================================================
+
+  "dependencies": {
+
+    // Password hashing library
+    "bcrypt": "^6.0.0",
+
+    // Enables Cross-Origin Resource Sharing
+    "cors": "^2.8.6",
+
+    // Loads environment variables from .env file
+    "dotenv": "^17.3.1",
+
+    // Backend framework for Node.js
+    "express": "^5.2.1",
+
+    // JWT authentication library
+    "jsonwebtoken": "^9.0.3",
+
+    // PostgreSQL database client
+    "pg": "^8.20.0"
+  },
+
+
+  // ====================================================
+  // Development Dependencies
+  // ====================================================
+  // Packages used during development and testing.
+  // ====================================================
+
+  "devDependencies": {
+
+    // Playwright testing framework
+    "@playwright/test": "^1.59.1",
+
+    // Jest testing framework
+    "jest": "^30.4.2",
+
+    // Automatically restarts server during development
+    "nodemon": "^3.1.14",
+
+    // HTTP testing library for APIs
+    "supertest": "^7.2.2"
+  }
+}
